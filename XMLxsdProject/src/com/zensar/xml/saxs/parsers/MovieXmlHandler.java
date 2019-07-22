@@ -15,25 +15,25 @@ public class MovieXmlHandler extends DefaultHandler {
 	@Override
 	public void endDocument() throws SAXException {
 		// TODO Auto-generated method stub
-		super.endDocument();
+		System.out.println("end of Xml Document");
 	}
 
 	@Override
-	public void endElement(String arg0, String arg1, String arg2) throws SAXException {
-		// TODO Auto-generated method stub
-		super.endElement(arg0, arg1, arg2);
+	public void endElement(String uri, String localName, String qName) throws SAXException {
+		// TODO Auto-generated method stub super.endElement(arg0, arg1, arg2);
+		System.out.println("end element: "+qName);
 	}
 
 	@Override
 	public void startDocument() throws SAXException {
 		// TODO Auto-generated method stub
-		super.startDocument();
+		System.out.println("starting.....");
 	}
 
 	@Override
-	public void startElement(String arg0, String arg1, String arg2, Attributes arg3) throws SAXException {
+	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
 		// TODO Auto-generated method stub
-		super.startElement(arg0, arg1, arg2, arg3);
+		System.out.println("start element: "+qName);
 	}
 
 }
